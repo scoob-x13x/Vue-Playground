@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="app" :class="period">
-    <HelloWorld/>
+    <MainView/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainView from './components/MainView'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MainView
   },
 
   data() {

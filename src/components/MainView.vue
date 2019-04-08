@@ -1,19 +1,33 @@
 <template>
     <main>
-      <Counter></Counter>
+        <CTitle
+            :countertitle="this.CounterTitle"
+            :counterdate="this.CounterDate"></CTitle>   
+        <Counter></Counter>
     </main>
 </template>
 
 <script>
-
-import Counter from "./Counter.vue"
+//
+import Counter from "./Counter"
+import CTitle from "./CTitle"
 
 export default {
-    name: 'WeatherApp',
+    name: 'MainView',
 
     components: {
-      Counter
-    }
+      Counter,
+      CTitle
+    },
+
+    data() {
+        return {
+            CounterTitle: "Bla",
+            CounterDate: new Date('2018-05-13T00:00:00')
+        }
+    },
+
+
 }
 </script>
 
@@ -21,9 +35,7 @@ export default {
 main {
     width: 100%;
     height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
 
     display: flex;
     flex-direction: column;
